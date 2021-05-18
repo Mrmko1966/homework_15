@@ -51,44 +51,28 @@ def deleting():
 	# 	os.rmdir("Dir3")
 	elif deleting_path ==3 and not os.listdir("new_dir/Dir1"):
 		os.chdir(os.getcwd())
-		if os.listdir('new_dir/Dir1/Dir3'):
-			os.rmdir('new_dir/Dir1/Dir3/Dir4')	
+		if os.listdir('new_dir/Dir1') :
+			if os.listdir('new_dir/Dir1/Dir3'):
+				os.rmdir('new_dir/Dir1/Dir3/Dir4')	
 			os.rmdir('new_dir/Dir1/Dir2')
 			os.rmdir("new_dir/Dir1/Dir3")
 			os.rmdir("new_dir/Dir1")
-			os.remove('File.txt')
-		elif os.listdir('new_dir/Dir1'):
-			os.rmdir('new_dir/Dir1/Dir2')
-			os.rmdir("new_dir/Dir1/Dir3")
-			os.rmdir("new_dir/Dir1")
-			os.remove('File.txt')
+			os.remove('new_dir/File.txt')
 		else:
 			os.rmdir("new_dir/Dir1")
-			os.remove('File.txt')
+			os.remove('new_dir/File.txt')
 		
-	elif deleting_path ==4 and not os.listdir("new_dir"):
-		os.chdir(os.getcwd())
-		if os.listdir():
-			os.rmdir('new_dir/Dir1/Dir3/Dir4')	
-			os.rmdir('new_dir/Dir1/Dir2')
-			os.rmdir("new_dir/Dir1/Dir3")
-			os.rmdir("new_dir/Dir1")
-			os.remove('File.txt')
-			os.remove('new_dir')
-		elif os.listdir('new_dir/Dir1'):
-			os.rmdir('new_dir/Dir1/Dir2')
-			os.rmdir("new_dir/Dir1/Dir3")
-			os.rmdir("new_dir/Dir1")
-			os.remove('File.txt')
-			os.remove('new_dir')
-		elif os.listdir('new_dir'):
-			os.rmdir("new_dir/Dir1")
-			os.remove('File.txt')
-			os.remove('new_dir')
-		else:
-			os.remove('new_dir')
+	elif deleting_path == 4 and not os.listdir("new_dir") :
+			if os.listdir('new_dir/Dir1') :
+				if os.listdir('new_dir/Dir1/Dir3') and os.listdir('new_dir/Dir1/Dir2'):
+					os.rmdir('new_dir/Dir1/Dir3/Dir4')
+				else:
+					os.rmdir('new_dir/Dir1/Dir2')
+					os.rmdir('new_dir/Dir1/Dir3')
+			else:
+				os.rmdir('new_dir/Dir1')
 	else:
-		print("please first create folders")
+		os.rmdir('new_dir')
 	
 s = input("Do you want to creat folders path")
 if s == "yes" :
@@ -99,3 +83,4 @@ else:
 		deleting()
 	else:
 		print("by")
+
