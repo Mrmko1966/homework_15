@@ -1,21 +1,22 @@
 {"items":[
     {
-        "name":"Natalie",
-        "surname":"Portman",
-        "age":39,
-        "height": 1.6,
-        "married": true,
-        "movies": ["Black Swan","Thor","V for Vendetta","The Other Boleyn Girl"]
+        "name":"Natalia",
+        "surname":"Oreiro",
+        "url":"http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcT3_8PjjUpfY8hTiGR0xqp44kD16ksLOzJAn0GNjSkxi4S1RWQCuq_wCACvjDvz"
+        
         
     },
     {
-        "name":"Scarlett",
-        "surname":"Johansson",
-        "age":35,
-        "height": 1.6,
-        "married": false,
-        "movies": ["Black Widow","Lucy","The Avengers","The Other Boleyn Girl"]        
+        "name":"jessica",
+        "surname":"Simpson",
+        "url":"https://upload.wikimedia.org/wikipedia/commons/f/f2/Jessica_Simpson_Joining_Forces_with_the_Rockies_April_2011_%28cropped%29.jpg"
+       
+    },
+    {
+        "name":"Adel",
+        "surname":"Simpson",
+        "url":"https://uk.toluna.com//dpolls_images/2016/04/23/5bc72609-421c-4067-b66e-135d028b76b8.jpg"
+       
     }
-
 ]
 }
